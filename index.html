@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bitácora José Aceituno</title>
+    <link rel="icon" href="<link rel="icon" href="Recursos/img/ESC.png" type="image/png">
+    <style>
+        /* Estilos Generales */
+        html, body {
+            height: 100%;
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            display: flex;
+            flex-direction: column;
+            text-align: center;
+        }
+
+        header {
+            padding: 20px;
+            background-color: rgb(27, 50, 135);
+            color: azure;
+        }
+
+        /* --- INSTRUCCIÓN 1: TÍTULO NEÓN MORADO --- */
+        header h1 {
+            color: #fff;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            /* Efecto fosforescente morado */
+            text-shadow: 
+                0 0 5px #fff, 
+                0 0 10px #bc13fe, 
+                0 0 20px #bc13fe, 
+                0 0 40px #bc13fe;
+        }
+
+        main {
+            flex: 1;
+            padding: 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+            background-color: rgb(45, 237, 215);
+            width: 100%;
+        }
+
+        /* --- EL RETO: CLASE .semana (TARJETAS) --- */
+        .semana {
+            background-color: white;
+            border-radius: 12px;
+            padding: 20px;
+            margin: 20px auto;
+            max-width: 700px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            text-align: left;
+            border-left: 6px solid rgb(27, 50, 135);
+            transition: 0.3s;
+        }
+
+        .semana:hover {
+            box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+        }
+
+        /* --- INSTRUCCIÓN 2: ZOOM LOGO --- */
+        .logo-zoom {
+            transition: transform 0.3s ease;
+        }
+
+        .logo-zoom:hover {
+            transform: scale(1.15); /* Zoom del 15% */
+        }
+
+        footer {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 50px;
+            border-top: 1px solid rgb(133, 185, 133);
+            background-color: rgb(39, 55, 122);
+            color: white;
+        }
+
+        @media(max-width:600px){
+            footer {
+                flex-direction: column;
+                gap: 15px;
+                padding: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Bitácora</h1>
+        <p>Primera y Segunda Unidad</p>
+    </header>
+
+    <main>
+        <!-- Ejemplo de entrada de bitácora usando la clase .semana -->
+        <div class="semana">
+            <h2>Semana 1</h2>
+            <p>Aquí puedes escribir lo que aprendiste en la primera semana de clases.</p>
+        </div>
+
+        <div class="semana">
+            <h2>Semana 2</h2>
+            <p>Contenido de la segunda unidad y actividades realizadas.</p>
+        </div>
+    </main>
+
+    <footer>
+        <span>@joseeaceituno</span>
+        <img src="https://www.capouilliez.edu.gt/assets/img/logo.png" 
+             alt="Logo Colegio" 
+             class="logo-zoom" 
+             height="50">
+    </footer>
+
+</body>
+</html>
