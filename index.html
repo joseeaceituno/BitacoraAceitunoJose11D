@@ -82,6 +82,20 @@
             background-color: rgb(39, 55, 122);
             color: white;
         }
+        .pdf-container {
+    margin-top: 15px;
+    width: 100%;
+    height: 500px; /* Altura ideal para leer el documento */
+    border-radius: 8px;
+    overflow: hidden;
+    border: 1px solid #ccc;
+}
+
+.pdf-container embed, 
+.pdf-container iframe {
+    width: 100%;
+    height: 100%;
+}
 
         @media(max-width:600px){
             footer {
@@ -102,9 +116,18 @@
     <main>
         <!-- Ejemplo de entrada de bitácora usando la clase .semana -->
         <div class="semana">
-            <h2>Semana 1</h2>
-            <p>Aquí puedes escribir lo que aprendiste en la primera semana de clases.</p>
-        </div>
+    <h2>Semana 1</h2>
+    <p>A continuación se presenta el documento PDF con los temas y apuntes de esta semana:</p>
+    
+    <div class="pdf-container">
+        <embed src="Recursos/docs/tu-archivo.pdf" type="application/pdf" />
+        
+        <noembed>
+            <p>Tu navegador no apoya la visualización de PDFs. 
+            <a href="Recursos/docs/tu-archivo.pdf" target="_blank">Haz clic aquí para descargar el PDF.</a></p>
+        </noembed>
+    </div>
+</div>
 
         <div class="semana">
             <h2>Semana 2</h2>
